@@ -2,13 +2,8 @@ var mongoose = require('mongoose'),
     config = require('../config'),
     Schema = mongoose.Schema;
 
-//检查数据库连接情况
-mongoose.connect(config.db, function (err) {
-    if (err) {
-        console.log(err.message);
-        process.exit(1);
-    }
-});
+var db = mongoose.createConnection(config.db);
+
 
 //创建Account的Model
 var AccountSchema = new Schema({
@@ -23,7 +18,7 @@ var AccountSchema = new Schema({
 });
 
 
-var AccountModel = mongoose.model('Account', AccountSchema);
+var AccountModel = db.model('Account', AccountSchema);
 
 var Account = {
     newAccount: function (user, callback) {
