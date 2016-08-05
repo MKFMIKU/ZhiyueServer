@@ -41,6 +41,11 @@ var Account = {
         AccountModel.findOne({'nickname':nickname}, function (err, doc) {
             callback(err, doc);
         })
+    },
+    recommnAccount: function (callback) {
+        AccountModel.find({}, function (err, docs) {
+            callback(err, docs)
+        }).limit(3);
     }
 };
 

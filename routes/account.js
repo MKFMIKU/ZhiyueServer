@@ -26,7 +26,7 @@ router.post('/sign', function (req, res) {
         res.json({
             code: 200,
             version: "1.0.0",
-            msg: ans
+            msg: ans?"ok":"wrong"
         })
     })
 });
@@ -41,7 +41,7 @@ router.post('/login', function (req, res) {
             console.log(err);
         else if (!doc)
             res.json({
-                code: 200,
+                code: 403,
                 version: "1.0.0",
                 msg: "No user"
             });
@@ -50,7 +50,8 @@ router.post('/login', function (req, res) {
             res.json({
                 code: ans ? 200 : 403,
                 version: "1.0.0",
-                msg: ans ? "Login OK" : "Wrong Password"
+                msg: ans ? "ok" : "Wrong Password",
+                result: ans? doc: null
             })
         }
     });
@@ -72,7 +73,8 @@ router.get('/:nickname', function (req, res) {
             res.json({
                 code: 200,
                 version: "1.0.0",
-                msg: {
+                msg: "ok",
+                result: {
                     avatar: doc.avatar,
                     nickname: doc.nickname,
                     name: doc.name,
