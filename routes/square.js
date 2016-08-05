@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var Tweet = require('../models/Tweet');
+var Account = require('../models/Account');
 
 router.get('/', function (req, res) {
     res.json({
@@ -24,17 +25,18 @@ router.post('/post', function (req, res) {
     });
 });
 
-router.get('/get', function (req, res) {
-    Tweet.findTweet(req.body.index, function (err, docs) {
+router.get('/get/:index', function (req, res) {
+    Tweet.findTweet(req.params.index, function (err, docs) {
         if(err)
             console.log(err);
-        else
+        else {
             res.json({
                 code: 200,
                 version: "1.0.0",
                 msg: "ok",
                 result: docs
             })
+        }
     })
 });
 
