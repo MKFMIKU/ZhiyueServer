@@ -37,10 +37,10 @@ var Tweet = {
             }
         });
     },
-    findTweet: function (index, callback) {
+    findTweet: function (callback) {
         TweetModel.find({}, function (err, docs) {
             callback(err, docs)
-        }).skip(index*5).limit(5);
+        });
     }
 };
 

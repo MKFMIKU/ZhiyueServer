@@ -1,0 +1,31 @@
+.content {
+    width: 96%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content input {
+    margin: 10px auto;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    display: block;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+.sub {
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    width: 140px;
+    height: 48px;
+    background-color: #7ac8f2;
+}
+
+.sub:hover {
+    background-color: lawngreen;
+}
+
+.sub p {
+    line-height: 48px;
+}

@@ -25,8 +25,8 @@ router.post('/post', function (req, res) {
     });
 });
 
-router.get('/get/:index', function (req, res) {
-    Tweet.findTweet(req.params.index, function (err, docs) {
+router.get('/get', function (req, res) {
+    Tweet.findTweet(function (err, docs) {
         if(err)
             console.log(err);
         else {

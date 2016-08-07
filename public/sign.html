@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sign.css">
+</head>
+<body>
+
+<div class="content" id="content">
+    <input type="text" v-model="user.nickname" placeholder="昵称">
+    <input type="text" v-model="user.name" placeholder="姓名">
+    <input type="number" v-model="user.phone" placeholder="电话">
+    <input type="email" v-model="user.email" placeholder="邮箱">
+    <input type="text" v-model="user.school" placeholder="学校">
+    <input type="password" v-model="user.password" placeholder="密码">
+
+    <div class="sub" @click="sub">
+        <p>提交</p>
+    </div>
+</div>
+
+<script src="//cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+<script src="//cdn.bootcss.com/vue-resource/0.9.3/vue-resource.min.js"></script>
+<script src="js/sign.js"></script>
+</body>
+</html>
