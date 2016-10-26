@@ -5,6 +5,12 @@ var User = {
     phone: "",
     email: "",
     school: "",
+    major: "",
+    dreamSchool: "",
+    dreamMajor: "",
+    dreamCity: "",
+    testMajor: "",
+    testPublic: "",
     password: ""
 };
 
