@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var Tweet = require('../models/Tweet');
-var Account = require('../models/Account');
+var Tweet = require('./Tweet');
+var Account = require('./Account');
 
 router.get('/', function (req, res) {
     res.json({

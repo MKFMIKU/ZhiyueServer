@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var avatarRandom = require('../libs/avatarRandom');
 
-var Account = require('../models/Account');
-var User = require('../models/User');
+var Account = require('./Account');
+var User = require('./User');
 
 //Use fo sign msg = 0 Stand Sign lost, else stand sin ok!
 router.post('/sign', function (req, res) {

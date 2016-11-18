@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var Account = require('../models/Account');
+var Account = require('./Account');
 
 router.get('/:nickname', function (req, res) {
     Account.recommnAccount(function (err, docs) {
