@@ -4,7 +4,9 @@ var Account = {
     newAccount: function (user, callback) {
         var accountEntity = new AccountModel(user);
         this.showAccount(user.email, function (err, doc) {
-            if(doc)
+            if(err)
+                callback(err);
+            else if(doc)
                 callback("Account existed");
             else
                 accountEntity.save(function (err, doc) {

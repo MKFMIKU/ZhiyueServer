@@ -33,8 +33,9 @@ var TweetSchema = new Schema({
     content: String,
     loves: [String],
     creater: String,
-    comments: [TweetSchema]
+    comments: [String]
 });
+
 
 var AccountModel = db.model('Account', AccountSchema);
 var TweetModel = db.model('Tweet', TweetSchema);
