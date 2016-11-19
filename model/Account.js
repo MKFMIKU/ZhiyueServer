@@ -2,6 +2,7 @@ var AccountModel = require('./models').AccountModel;
 
 var Account = {
     newAccount: function (user, callback) {
+        console.log(user);
         var accountEntity = new AccountModel(user);
         this.showAccount(user.email, function (err, doc) {
             if(err)

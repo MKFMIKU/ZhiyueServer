@@ -6,8 +6,9 @@ var Tweet = require('../model/Tweet');
 
 //Use fo sign msg = 0 Stand Sign lost, else stand sin ok!
 router.post('/sign', function (req, res) {
-
-    Account.newAccount(req.body.account, function (err, user) {
+    var account = req.body.account;
+    console.log(req.body);
+    Account.newAccount(req.body, function (err, user) {
         if(err)
             res.json({
                 code: 500,
